@@ -8,6 +8,7 @@ import { MaterialModule } from '@angular/material';
 import { MasonryModule } from 'angular2-masonry';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MdSnackBarModule} from '@angular/material';
+import {MdIconModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {MdSnackBarModule} from '@angular/material';
     ImageListComponent
   ],
   imports: [
-    BrowserModule,FormsModule,HttpModule,MaterialModule,MasonryModule,BrowserAnimationsModule,MdSnackBarModule
+    BrowserModule,FormsModule,HttpModule,MaterialModule,MasonryModule,
+    BrowserAnimationsModule,MdSnackBarModule,MdIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
