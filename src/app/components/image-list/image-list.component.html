@@ -1,0 +1,29 @@
+<md-card>
+  <md-input-container>
+  <input class="search" mdInput [(ngModel)]="search"/>
+  </md-input-container>
+<button md-fab (click)="searchImages()">Click</button>
+</md-card>
+
+<div *ngIf="searching">
+  <md-progress-bar mode="indeterminate"></md-progress-bar>
+</div>
+
+
+<div class="row">
+  <div *ngFor="let image of images" class="col-md-4">
+    <md-card class="image-container">
+      <md-card-header>
+        <div class="avatar" md-card-avatar [ngStyle]="{'background-image':'url('+ image.userImageURL +')', 'background-size':'40px 40px'}"></div>
+        <md-card-title>User: {{ image.user }}</md-card-title>
+      </md-card-header>
+      <img md-card-image height="100px" src="{{image.webformatURL}}">
+      <md-card-content>
+        <p>Tags: {{ image.tags }}</p>
+        <p>Comments: {{ image.comments }}</p>
+        <p>Likes: {{ image.likes }}</p>
+      </md-card-content>
+
+    </md-card>
+  </div>
+</div>
